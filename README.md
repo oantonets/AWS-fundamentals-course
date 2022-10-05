@@ -1,2 +1,2 @@
 # AWS-fundamentals-course
-Lohika 
+Lohika AWS course
