@@ -18,9 +18,25 @@ aws cloudformation delete-stack --stack-name=week0-test
 {
     "Effect": "Allow",
     "Action": [
+        "cloudformation:DeleteStackInstances",
+        "cloudformation:DeleteResource",
+        "cloudformation:UpdateResource",
+        "cloudformation:GetResourceRequestStatus",
+        "cloudformation:ListResourceRequests",
+        "cloudformation:DeleteStackSet",
+        "cloudformation:ListResources",
+        "cloudformation:CancelResourceRequest",
+        "cloudformation:GetResource",
         "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:CreateResource",
+        "iam:GetAccountAuthorizationDetails",
         "iam:PassRole",
-        "iam:GetAccountAuthorizationDetails"
+        "ec2:RunInstances",
+        "ec2:DescribeInstances",
+        "ec2:DescribeImages",
+        "ec2:TerminateInstances",
+        "ssm:GetParameters"
     ],
     "Resource": "*"
 }
