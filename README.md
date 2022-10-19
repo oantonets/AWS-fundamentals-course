@@ -69,5 +69,5 @@ ssh -i <key> ec2-user@ec2-<public-ip>.compute-1.amazonaws.com
 
 - to delete stack:
 ```
-aws cloudformation delete-stack --stack-name=week0-test
+aws cloudformation delete-stack --stack-name=week-1-test
 ```
