@@ -12,7 +12,7 @@ aws cloudformation create-stack --stack-name week0-test --template-body file:///
 aws cloudformation create-stack --stack-name week0-test --template-body file:///Users/oantonets/Documents/learn/AWS/AWS-fundamentals-course/week-0-EC2-template.yml --parameters ParameterKey=InstanceType,ParameterValue=t2.micro
 ```
 
-to delete stack:
+- to delete stack:
 ```
 aws cloudformation delete-stack --stack-name=week0-test
 ```
@@ -44,4 +44,30 @@ aws cloudformation delete-stack --stack-name=week0-test
     ],
     "Resource": "*"
 }
+```
+
+# week-1:
+commands to create stack with resources:
+- with default params 
+```
+aws cloudformation create-stack --stack-name week-1-test  --template-body file:///Users/oantonets/Documents/learn/AWS/AWS-fundamentals-course/week-1-ASG-template.yml
+```
+- to list all stacks and query for public ip and instance id
+```
+aws ec2 describe-instances --filters "Name=instance-state-name,Values=running" --query "Reservations[].Instances[].[PublicIpAddress, InstanceId]"
+```
+
+- to terminate one of the instances:
+```
+aws ec2 terminate-instances --instance-ids <instance-id>
+```
+
+- to connect to instance use public ip
+```
+ssh -i <key> ec2-user@ec2-<public-ip>.compute-1.amazonaws.com
+```
+
+- to delete stack:
+```
+aws cloudformation delete-stack --stack-name=week-1-test
 ```
