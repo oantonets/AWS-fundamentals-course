@@ -71,3 +71,12 @@ ssh -i <key> ec2-user@ec2-<public-ip>.compute-1.amazonaws.com
 ```
 aws cloudformation delete-stack --stack-name=week-1-test
 ```
+
+# week-2:
+to create file and bucket
+- run init-s3.h "backet-name"
+pass backed-name as argument or bucket will be created with default name(lohika-oantonets-2022)
+- run one of terraform config files to create infracture, connect to instance using ip in the output section.
+Check file on instance.
+
+##### You'll need to remove s3 by hand
